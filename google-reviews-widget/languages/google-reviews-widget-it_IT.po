@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2025-04-23 14:20+0200\n"
+"PO-Revision-Date: 2025-04-23 14:54+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: google-reviews-widget.php:112
+msgid "Read our reviews"
+msgstr "Leggi le recensioni"
+
+#: google-reviews-widget.php:116
+msgid "Read our review"
+msgstr "Leggi la recensione"
+
+#: google-reviews-widget.php:139
+#, php-format
+msgid "%s on 5"
+msgstr "%s su 5"
+
+#: google-reviews-widget.php:140
+#, php-format
+msgid "based on %s reviews"
+msgstr "basato su %s recensioni"
+
+#: google-reviews-widget.php:146
+msgid "Read all our ratings"
+msgstr "Leggi tutte le nostre valutazioni"
+
+#: google-reviews-widget.php:179
+msgid "Read more"
+msgstr "Leggi di più"
+
+#: google-reviews-widget.php:189
+msgid "No reviews available."
+msgstr "Nessuna recensione disponibile."
+
+#, php-format
+#~ msgid "%s reviews"
+#~ msgstr "%s recensioni"
+
+#, php-format
+#~ msgid "%s review"
+#~ msgstr "%s recensione"

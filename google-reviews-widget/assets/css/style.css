@@ -1,0 +1,264 @@
+*,
+*::after,
+*::before {
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* === BADGE & SIDEBAR SHARED === */
+.star-rating {
+    position: relative !important;
+    display: inline-block !important;
+    width: 143px !important;
+    height: 28.6px !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='%23ddd'%3E%3Cpath d='M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z'/%3E%3C/svg%3E") !important;
+    background-repeat: repeat-x !important;
+    background-size: 28.6px 28.6px !important;
+    margin-bottom: 6px !important;
+}
+
+.star-rating::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: var(--star-fill, 0%) !important;
+    height: 100% !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='%23facc15'%3E%3Cpath d='M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21z'/%3E%3C/svg%3E") !important;
+    background-repeat: repeat-x !important;
+    background-size: 28.6px 28.6px !important;
+    pointer-events: none !important;
+}
+
+/* === BADGE === */
+.google-reviews-badge {
+    position: fixed !important;
+    bottom: 20px !important;
+    background: white !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+    padding: 18px 18px !important;
+    cursor: pointer !important;
+    z-index: 9950 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: baseline !important;
+    text-align: flex-start !important;
+    gap: 9px !important;
+
+    transition: transform 0.3s ease, opacity 0.3s ease !important;
+}
+
+.wrapper-badge {
+    text-align: left !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+
+.wrapper-badge-bottom {
+    text-align: center !important;
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 6px !important;
+    justify-content: center !important;
+}
+
+.google-reviews-badge--left {
+    left: 20px !important;
+    right: auto !important;
+}
+
+.google-reviews-badge--right {
+    right: 20px !important;
+    left: auto !important;
+}
+
+.google-reviews-badge__logo img {
+    display: block !important;
+}
+
+.google-reviews-badge__rating {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-top: 6px !important;
+}
+
+.google-reviews-badge__score {
+    font-size: 0.875rem !important;
+    font-weight: bolder !important;
+    color: #111 !important;
+    line-height: 1 !important;
+}
+
+.google-reviews-badge__count {
+    margin-top: 4px !important;
+    font-size: 0.75rem !important;
+    color: #111 !important;
+    font-weight: bolder !important;
+    background: none !important;
+    color: inherit !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    outline: inherit !important;
+    text-decoration: underline !important;
+}
+
+.google-reviews-badge__logo img {
+    display: block !important;
+    width: 28px !important;
+    height: 28px !important;
+}
+
+/* === SIDEBAR === */
+.google-reviews-sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 350px !important;
+    height: 100% !important;
+    background: #fff !important;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3) !important;
+    z-index: 10000 !important;
+    padding: 0px 20px 20px 20px !important;
+    overflow-y: auto !important;
+    transition: transform 0.3s ease !important;
+    transform: translateX(-100%) !important;
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Rechts of links verborgen via transform */
+.google-reviews-sidebar--left {
+    left: 0 !important;
+    transform: translateX(-100%) !important;
+}
+
+.google-reviews-sidebar--right {
+    right: 0 !important;
+    transform: translateX(100%) !important;
+}
+
+/* Wanneer open, komt hij in beeld */
+.google-reviews-sidebar.open {
+    display: block !important;
+    visibility: visible !important;
+}
+
+.google-reviews-sidebar.open.google-reviews-sidebar--left {
+    transform: translateX(0%) !important;
+}
+
+.google-reviews-sidebar.open.google-reviews-sidebar--right {
+    transform: translateX(0%) !important;
+}
+
+.google-reviews-sidebar__header {
+    position: sticky !important;
+    top: 0 !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 16px !important;
+    margin-bottom: 16px !important;
+    border-bottom: 1px solid #eee !important;
+}
+
+.google-reviews-sidebar__branding {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-bottom: 1rem !important;
+    justify-content: space-between !important;
+    padding-top: 1rem !important;
+}
+
+.google-reviews-sidebar__title {
+    font-size: 1.25rem !important;
+}
+
+.google-reviews-sidebar__close {
+    font-size: 1.5rem !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+.google-reviews-sidebar__summary {
+    text-align: center !important;
+}
+
+.google-reviews-sidebar__score {
+    font-size: 0.95rem !important;
+    margin: 0 0 4px !important;
+}
+
+.google-reviews-sidebar__link {
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+}
+
+.google-reviews-sidebar__link a {
+    display: inline-block !important;
+    background-color: #1877f2 !important;
+    color: white !important;
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    border-radius: 24px !important;
+    text-decoration: none !important;
+}
+
+.google-review {
+    border: 1px solid #eee !important;
+    padding: 16px !important;
+    border-radius: 8px !important;
+    margin-bottom: 16px !important;
+    background: #f9f9f9 !important;
+    opacity: 0;
+    transform: translateX(-30px)
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.google-review__header {
+    display: flex !important;
+    gap: 12px !important;
+    margin-bottom: 8px !important;
+}
+
+.google-review__avatar {
+    border-radius: 50% !important;
+}
+
+.google-review__name {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+}
+
+.google-review__date {
+    font-size: 12px !important;
+    color: gray !important;
+}
+
+.google-review__text {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+}
+
+.read-more {
+    color: #0073aa !important;
+    font-size: 14px !important;
+    text-decoration: underline !important;
+    cursor: pointer !important;
+}
